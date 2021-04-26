@@ -1,5 +1,5 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Deferrable } = require('sequelize');
 const { Category } = require('.');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
@@ -40,7 +40,7 @@ Product.init(
       references: {
         model: Category,
         key: 'id',
-        deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+        deferrable: Deferrable.INITIALLY_IMMEDIATE
       }
     }
   },

@@ -1,4 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Deferrable } = require('sequelize');
+const Product = require('./Product');
+const Tag = require('./Tag');
 
 const sequelize = require('../config/connection');
 
@@ -17,7 +19,7 @@ ProductTag.init(
       references: {
         model: Product,
         key: 'id',
-        deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+        deferrable: Deferrable.INITIALLY_IMMEDIATE
       }
     },
     tag_id: {
@@ -25,7 +27,7 @@ ProductTag.init(
       references: {
         model: Tag,
         key: 'id',
-        deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+        deferrable: Deferrable.INITIALLY_IMMEDIATE
       }
     }
 
