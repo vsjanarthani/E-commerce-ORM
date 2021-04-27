@@ -46,7 +46,7 @@ After installing all the dependencies, set up the .env file with the username, p
 ```npm start``` 
 to check if the server is running without any error. If it runs then enter
 ```npm run seed``` 
-in your terminal to run the seed. For a walkthrough demo click here [!Demo](https:).
+in your terminal to run the seed. For a walkthrough demo click here [!Demo](https://drive.google.com/file/d/1TGY48-3jJEzJCVjQ_0HrmVJVoyCzF-6p/view?usp=sharing).
 
 ### License
 This application is covered under the following license. 
@@ -60,7 +60,7 @@ No contributions at the moment. If anyone wishes to provide contributions, pleas
 No automated test is set up for this application. To test the API routes, use Postman or insomnia core.
 
 ### Screenshot
-![webpage](./assets/)
+![code](./assets/postman-image.png)
 ### Questions
 If you have any questions, please reach out to the<br>
 Author: Janarthani V S <br>

@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   try {
     const productById = await Product.findOne({ where: { id }, include: [Category, Tag] });
     if (!productById) {
-      return res.status(400).json({ error: `There is no category with the Id of ${id}` });
+      return res.status(400).json({ error: `There is no product with the Id of ${id}` });
     }
     res.status(200).json(productById);
   }
@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 
 // create new product
 router.post('/', async (req, res) => {
-  console.log(`Hitting post route ${req.body}`);
+  // console.log(`Hitting post route ${req.body}`);
   /* req.body should look like this...
     {
       product_name: "New BTS Album",
@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
   */
   try {
     const product = await Product.create(req.body);
-    console.log(product);
+    // console.log(product);
     // if there's product tags, we need to create pairings to bulk create in the ProductTag model
     if (req.body.tagIds.length) {
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
